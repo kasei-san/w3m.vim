@@ -463,7 +463,8 @@ function! s:openCurrentHistory()
     let [cl,cc] = b:history[b:history_index].curpos
     call cursor(cl, cc)
   endif
-  setlocal ft=w3m bt=nofile noswf nomodifiable nowrap hidden nolist
+  setlocal ft=w3m bt=nofile noswf modifiable nowrap hidden nolist
+  "setlocal ft=w3m bt=nofile noswf nomodifiable nowrap hidden nolist
 endfunction
 
 function! s:analizeOutputs(output_lines)
